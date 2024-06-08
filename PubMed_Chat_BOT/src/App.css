@@ -1,0 +1,110 @@
+.chatbox{
+    /* box-shadow: inset 2px 2px 8px rgb(220, 220, 220); */
+    display: flex;
+    /* flex-wrap: wrap-reverse; */
+    flex-direction: column-reverse;
+    gap: 6px;
+    height: 470px;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    
+    justify-content: flex-start;
+    
+}
+.chatbox::-webkit-scrollbar{
+    display: none;
+}
+.messages{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.messages span{
+    background-color:#033663;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 8px;    
+    border-top-right-radius: 0px;
+    border-top-left-radius: 8px;
+}
+.ai{
+    justify-content: flex-start;
+}
+.ai span{
+    background-color: white;
+    color: #033663;
+    max-width: 90%;
+    border: 1px solid #033663;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 8px;
+}
+.ai-thinking{
+    animation-name: fade;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+@keyframes fade{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.4;
+    }
+    100%{
+        opacity: 1;
+    }
+   
+}
+.footer{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 6px;
+}
+.footer > div{
+    border: 2px solid #033663;
+    padding: 8px;
+    min-width: 60vw;
+    display: grid;
+    grid-template-columns: auto 50px;
+    border-radius: 8px;
+}
+.footer > div > input{
+    border-radius: 8px;
+    font-weight: 500;
+
+}
+.QUERY:focus{
+    border-color: transparent;
+    border-width: 0px;
+    outline: none;
+}
+.loader {
+    width: 60px;
+    aspect-ratio: 4;
+    background: radial-gradient(circle closest-side,#033663 90%,#0000) 0/calc(100%/3) 100% space;
+    clip-path: inset(0 100% 0 0);
+    animation: l1 1s steps(4) infinite;
+  }
+@keyframes l1 {to{clip-path: inset(0 -34% 0 0)}}
+
+
+.buttonSubmit{
+    border: 1px solid lightgray;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+.buttonSubmit:hover{
+    background-color: #033663;
+    color: white;
+}
+.graph{
+    border: 1px solid #033663;
+    width: 80%;
+    height: 700px;
+    border-radius: 0px 12px 12px 12px;
+}
