@@ -108,3 +108,10 @@
     height: 700px;
     border-radius: 0px 12px 12px 12px;
 }
+
+@media (width < 500px) {
+    .chatbox {
+        height: calc(100vh - 300px);
+        min-height: 300px;
+    }
+}

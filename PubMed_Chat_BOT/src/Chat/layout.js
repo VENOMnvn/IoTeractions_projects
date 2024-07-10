@@ -1,37 +1,19 @@
 import React, { useEffect } from "react";
 import {
-  LaptopOutlined,
-  NotificationOutlined,
-  UserOutlined,
-} from "@ant-design/icons";
-import {
   Avatar,
-  Breadcrumb,
-  Input,
-  Button,
   Layout,
-  Menu,
-  Typography,
   theme,
 } from "antd";
-import { Chart } from "react-google-charts";
-import { InboxOutlined } from "@ant-design/icons";
-import { message, Upload } from "antd";
 import logo from "./../Assets/logo.png";
 import "./../App.css";
 import Graph from "react-graph-vis";
 import axios from "axios";
-import { ArrowOutward, ArrowUpward } from "@mui/icons-material";
-import { type } from "@testing-library/user-event/dist/type";
-
+import {ArrowUpward } from "@mui/icons-material";
 const { Header, Content, Footer, Sider } = Layout;
 
-const path = "http://localhost:5000";
-// const path = ""
-// const path = "https://7ec75264-5058-4711-8a8f-b9fe5071fb47-00-166owuyz3b20a.sisko.replit.dev/";
+const path = "";
 
 const Layout_Chat = () => {
-  const [isAudioUploaded, setAudioUploaded] = React.useState(true);
 
   const [Message, setMessage] = React.useState([
     {
@@ -114,7 +96,7 @@ const Layout_Chat = () => {
         }}
       >
         <Avatar src={logo}></Avatar>
-        <p className="text-white mx-2">Pubmed Chat</p>
+        <p className="text-white mx-2">IoTer</p>
         <div
           style={{ flex: "1", display: "flex", justifyContent: "flex-end" }}
         ></div>
@@ -126,8 +108,8 @@ const Layout_Chat = () => {
         }}
       >
         <div className="m-2 text-lg bg-white rounded p-2 flex justify-center items-center gap-2 ">
-          <span className="text-2xl font-bold"> PubMed Retriever </span>
-          <span className="text-gray-400 mr-6">Your Wish for Medical</span>
+          <span className="text-2xl font-bold">One Shot knowledge Graph</span>
+          <span className="text-gray-400 mr-6"></span>
           <span>{fileName}</span>
         </div>
 
@@ -147,6 +129,7 @@ const Layout_Chat = () => {
               }}
             >
               <div className="chatbox">
+                
                 {
                   graphObject ? <>
                   <div className="graph">
